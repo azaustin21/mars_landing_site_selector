@@ -24,3 +24,16 @@ STEP_Y = int(RECT_HT / 2)
 
 screen = tk.Tk()
 canvas = tk.Canvas(screen, width=IMG_WIDTH, height=IMG_HT + 130)
+
+class Search():
+    """Read image and identify landing rectangles based on input criteria"""
+
+    def __int__(self, name):
+        self.name = name
+        self.rect_coords = {}
+        self.rect_means = {}
+        self.rect_ptps = {}
+        self.rect_stds = {}
+        self.ptp_filtered = []
+        self.std_filtered = []
+        self.high_graded_rects = []
